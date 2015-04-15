@@ -1,0 +1,2 @@
+E:\tm\code\Plugins\Nop.Plugin.ExternalAuth.OpenId\obj\Release\Nop.Plugin.ExternalAuth.OpenId.csproj.App.config
+E:\tm\code\Plugins\Nop.Plugin.ExternalAuth.OpenId\obj\Release\Nop.Plugin.ExternalAuth.OpenId.csprojResolveAssemblyReference.cache

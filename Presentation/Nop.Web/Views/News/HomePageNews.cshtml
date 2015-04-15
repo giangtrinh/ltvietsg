@@ -1,0 +1,33 @@
+﻿@model HomePageNewsItemsModel
+@using Nop.Web.Models.News;
+@if (Model.NewsItems.Count > 0)
+{
+    <div class="news-list-homepage">
+        <div class="title">
+            <a href="@Url.RouteUrl("NewsArchive")"><strong>@T("News")</strong></a>
+        </div>
+        <div class="news-items">
+            @foreach (var item in Model.NewsItems)
+            {
+                var i = Model.NewsItems.IndexOf(item) + 1;
+                <div class="item @if( ( i + 4 ) % 4 == 0){<text>last</text>}">
+                    <div class="news-item-img">
+                        <a href="@Url.RouteUrl("NewsItem", new { SeName = item.SeName })">
+                            <img src="@item.PictureUrl" alt="@item.Title" />
+                        </a>
+                    </div>
+                    <div class="news-head">
+                        <a class="news-title" href="@Url.RouteUrl("NewsItem", new { SeName = item.SeName })">
+                            @item.Title
+                        </a>
+                    </div>
+                    <div class="news-details">
+                        @Html.Raw(item.Short)
+                    </div>
+                </div>
+            } 
+        </div>
+    </div>
+
+}
+ 

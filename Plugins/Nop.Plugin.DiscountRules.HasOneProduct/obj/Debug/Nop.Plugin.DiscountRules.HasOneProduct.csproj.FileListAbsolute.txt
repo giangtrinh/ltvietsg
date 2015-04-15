@@ -1,0 +1,10 @@
+E:\tm\code\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Views\DiscountRulesHasOneProduct\Configure.cshtml
+E:\tm\code\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Description.txt
+E:\tm\code\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\web.config
+E:\tm\code\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\logo.jpg
+E:\tm\code\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Nop.Plugin.DiscountRules.HasOneProduct.dll.config
+E:\tm\code\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Nop.Plugin.DiscountRules.HasOneProduct.dll
+E:\tm\code\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Nop.Plugin.DiscountRules.HasOneProduct.pdb
+E:\tm\code\Plugins\Nop.Plugin.DiscountRules.HasOneProduct\obj\Debug\Nop.Plugin.DiscountRules.HasOneProduct.dll
+E:\tm\code\Plugins\Nop.Plugin.DiscountRules.HasOneProduct\obj\Debug\Nop.Plugin.DiscountRules.HasOneProduct.pdb
+E:\tm\code\Plugins\Nop.Plugin.DiscountRules.HasOneProduct\obj\Debug\Nop.Plugin.DiscountRules.HasOneProduct.csprojResolveAssemblyReference.cache

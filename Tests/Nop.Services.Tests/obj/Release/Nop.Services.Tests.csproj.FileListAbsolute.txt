@@ -1,0 +1,1 @@
+E:\tm\code\Tests\Nop.Services.Tests\obj\Release\Nop.Services.Tests.csprojResolveAssemblyReference.cache

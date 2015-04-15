@@ -1,0 +1,161 @@
+﻿@model BestSellersModel
+@{
+    Layout = "~/Views/Shared/_Root.cshtml";
+    Html.AddTitleParts(T("tg.web.BestSellers.title").Text);
+    Html.AddMetaDescriptionParts(T("tg.web.BestSellers.description").Text);
+    Html.AddMetaKeywordParts(T("tg.web.BestSellers.Keyword").Text);
+
+    Html.AppendScriptParts("~/Scripts/tm/jquery.dd.min.js");
+    Html.AppendCssFileParts("~/Content/tm/dd.css");
+}
+@using Nop.Core.Domain.Common;
+@using Nop.Core.Domain.Seo;
+@using Nop.Core.Infrastructure;
+@using Nop.Web.Models.Catalog;
+@using Nop.Web.Extensions;
+<div class="page category-page"> 
+    <div class="page-body">
+        <div class="side-2">
+            @Html.Widget("left_side_column_before")
+            @Html.Action("CategoryNavigation", "Catalog", new { currentCategoryId = 0, currentProductId = 0 })
+            @Html.Widget("left_side_column_after_category_navigation")
+            @Html.Action("ManufacturerNavigation", "Catalog", new { currentManufacturerId = 0 })
+            @Html.Widget("categorydetails_before_filters", Model.Id)
+            <div class="product-filters-wrapper">
+                @*filtering*@
+                @if (Model.PagingFilteringContext.PriceRangeFilter.Enabled)
+                {
+                    @Html.Partial("_FilterPriceBox", Model.PagingFilteringContext.PriceRangeFilter, new ViewDataDictionary())
+                }
+                @*filtering*@
+                @if (Model.PagingFilteringContext.SpecificationFilter.Enabled)
+                {
+                    @Html.Partial("_FilterSpecsBox", Model.PagingFilteringContext.SpecificationFilter, new ViewDataDictionary())
+                }
+            </div>
+            @Html.Action("VendorNavigation", "Catalog")
+            @Html.Widget("left_side_column_after")
+        </div>
+        <div class="center-2">
+            <div class="page-title">
+                <h1>@T("tg.web.BestSellers.title")</h1>
+            </div>
+            @Html.Widget("categorydetails_after_featured_products", Model.Id)
+            @if (Model.Products.Count > 0)
+            {
+                <div class="product-selectors">
+                    @*view mode*@
+                    @if (Model.PagingFilteringContext.AllowProductViewModeChanging && Model.Products.Count > 0)
+                    {
+                        <div class="product-viewmode">
+                            <span class="lblviewmode">@T("Catalog.ViewMode")</span>
+                            @foreach (var item in Model.PagingFilteringContext.AvailableViewModes)
+                            {
+                                <a href="@item.Value" class="viewmode viewmode-@item.Text">@item.Text</a>
+                            }
+                            @*@Html.DropDownList("products-viewmode", Model.PagingFilteringContext.AvailableViewModes, new { onchange = "setLocation(this.value);" })*@
+                        </div>
+                    }
+                </div>
+            }
+            @Html.Widget("categorydetails_before_product_list", Model.Id)
+            @*product list*@
+            @if (Model.Products.Count > 0)
+            {
+                if (Model.PagingFilteringContext.ViewMode == "list")
+                {
+                    @*list mode*@
+                    <div class="product-list">
+                        @foreach (var product in Model.Products)
+                        {
+                            <div class="item-box">
+                                @Html.Partial("_ProductBox", product)
+                            </div>
+                        }
+                    </div>
+                }
+                else
+                {
+                    @*grid mode*@
+                    <div class="product-grid">
+                        @foreach (var product in Model.Products)
+                        {
+                            var i = Model.Products.IndexOf(product) + 1;
+                            <div class="item-box @if( ( i + 4 ) % 4 == 0){<text>last</text>}">
+                                @{
+                                                 //prepare "Add to cart" AJAX link
+                                                 string addtocartlink = "";
+                                                 var shoppingCartTypeId = (int)Nop.Core.Domain.Orders.ShoppingCartType.ShoppingCart;
+                                                 var quantity = 1;
+                                                 if (product.ProductPrice.ForceRedirectionAfterAddingToCart)
+                                                 {
+                                                     addtocartlink = Url.RouteUrl("AddProductToCart-Catalog", new { productId = Model.Id, shoppingCartTypeId = shoppingCartTypeId, quantity = quantity, forceredirection = product.ProductPrice.ForceRedirectionAfterAddingToCart });
+                                                 }
+                                                 else
+                                                 {
+                                                     addtocartlink = Url.RouteUrl("AddProductToCart-Catalog", new { productId = Model.Id, shoppingCartTypeId = shoppingCartTypeId, quantity = quantity, });
+                                                 }
+                                }
+                                <div class="product-item" data-productid="@Model.Id">
+                                    <div class="bestsellers-icon">
+                                    </div> 
+                                    <div class="picture">
+                                        <a href="@Url.RouteUrl("Product", new { SeName = product.SeName })" title="@product.DefaultPictureModel.Title">
+                                            <img alt="@product.DefaultPictureModel.AlternateText" src="@product.DefaultPictureModel.ImageUrl" title="@product.DefaultPictureModel.Title" />
+                                        </a>
+                                    </div>
+                                    <div class="details">
+                                        <h2 class="product-title">
+                                            <a href="@Url.RouteUrl("Product", new { SeName = product.SeName })">@product.Name</a>
+                                        </h2>
+                                        @if (product.ReviewOverviewModel.AllowCustomerReviews)
+                                        {
+                                            int ratingPercent = 0;
+                                            if (product.ReviewOverviewModel.TotalReviews != 0)
+                                            {
+                                                ratingPercent = ((product.ReviewOverviewModel.RatingSum * 100) / product.ReviewOverviewModel.TotalReviews) / 5;
+                                            }
+                                            <div class="product-rating-box" title="@string.Format(T("Reviews.TotalReviews").Text, product.ReviewOverviewModel.TotalReviews)">
+                                                <div class="rating">
+                                                    <div style="width: @(ratingPercent)%">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        }
+                                        <div class="description">
+                                            @Html.Raw(product.ShortDescription)
+                                        </div>
+                                        <div class="add-info">
+                                            <div class="prices">
+                                                @if (!String.IsNullOrEmpty(product.ProductPrice.OldPrice))
+                                                {
+                                                    <span class="price old-price">@product.ProductPrice.OldPrice</span>
+                                                }
+                                                <span class="price actual-price">@product.ProductPrice.Price</span>
+                                                @if (product.ProductPrice.DisplayTaxShippingInfo)
+                                                {
+                                                    var inclTax = EngineContext.Current.Resolve<Nop.Core.IWorkContext>().TaxDisplayType == Nop.Core.Domain.Tax.TaxDisplayType.IncludingTax;
+                                                    //tax info is already included in the price (incl/excl tax). that's why we display only shipping info here
+                                                    //of course, you can modify appropriate locales to include VAT info there
+                                                    <div class="tax-shipping-info">
+                                                        @T(inclTax ? "Products.Price.TaxShipping.InclTax" : "Products.Price.TaxShipping.ExclTax", Url.RouteUrl("Topic", new { SeName = Html.GetTopicSeName("shippinginfo") }))
+                                                    </div>
+                                                }
+                                            </div> 
+                                            @Html.Widget("productbox_add_info", Model.Id)
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        }
+                    </div>
+                }
+            }
+            <div class="pager">
+                @Html.Pager(Model.PagingFilteringContext).QueryParam("pagenumber")
+            </div>
+        </div>
+    </div>
+    @Html.Action("RecentlyViewedProductsBlock", "Product", new { productThumbPictureSize = 100 })
+</div>

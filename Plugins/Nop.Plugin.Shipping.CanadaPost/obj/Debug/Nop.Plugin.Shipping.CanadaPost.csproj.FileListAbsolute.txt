@@ -1,0 +1,10 @@
+E:\tm\code\Presentation\Nop.Web\Plugins\Shipping.CanadaPost\Views\ShippingCanadaPost\Configure.cshtml
+E:\tm\code\Presentation\Nop.Web\Plugins\Shipping.CanadaPost\web.config
+E:\tm\code\Presentation\Nop.Web\Plugins\Shipping.CanadaPost\Description.txt
+E:\tm\code\Presentation\Nop.Web\Plugins\Shipping.CanadaPost\logo.jpg
+E:\tm\code\Presentation\Nop.Web\Plugins\Shipping.CanadaPost\Nop.Plugin.Shipping.CanadaPost.dll.config
+E:\tm\code\Presentation\Nop.Web\Plugins\Shipping.CanadaPost\Nop.Plugin.Shipping.CanadaPost.dll
+E:\tm\code\Presentation\Nop.Web\Plugins\Shipping.CanadaPost\Nop.Plugin.Shipping.CanadaPost.pdb
+E:\tm\code\Plugins\Nop.Plugin.Shipping.CanadaPost\obj\Debug\Nop.Plugin.Shipping.CanadaPost.dll
+E:\tm\code\Plugins\Nop.Plugin.Shipping.CanadaPost\obj\Debug\Nop.Plugin.Shipping.CanadaPost.pdb
+E:\tm\code\Plugins\Nop.Plugin.Shipping.CanadaPost\obj\Debug\Nop.Plugin.Shipping.CanadaPost.csprojResolveAssemblyReference.cache

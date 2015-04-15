@@ -1,0 +1,1 @@
+E:\tm\code\Plugins\Nop.Plugin.Payments.AuthorizeNet\obj\Release\Nop.Plugin.Payments.AuthorizeNet.csprojResolveAssemblyReference.cache

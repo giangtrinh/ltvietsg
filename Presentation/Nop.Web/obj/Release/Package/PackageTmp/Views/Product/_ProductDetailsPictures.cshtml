@@ -1,0 +1,57 @@
+﻿@model ProductDetailsModel
+@using Nop.Core.Domain.Media
+@using Nop.Core.Infrastructure;
+@using Nop.Web.Models.Catalog;
+@{
+    Html.AddScriptParts("~/Scripts/tm/jquery.jqzoom-core.js");
+    Html.AddCssFileParts("~/Content/tm/jquery.jqzoom.css");
+
+    int productPerRow = EngineContext.Current.Resolve<MediaSettings>().ProductThumbPerRowOnProductDetailsPage;
+}
+<div class="gallery">
+    <div class="picture">
+        @if (Model.DefaultPictureZoomEnabled)
+        {
+            <a href="@Model.DefaultPictureModel.FullSizeImageUrl" title="@Model.Name" class="jqzoom" id="main-product-img-lightbox-anchor-@Model.Id" rel="gal1">
+                <img class="image-medium" alt="@Model.DefaultPictureModel.AlternateText" src="@Model.DefaultPictureModel.ImageUrl" title="@Model.DefaultPictureModel.Title" itemprop="image" id="main-product-img-@Model.Id" />
+            </a>
+        }
+        else
+        {
+            <img class="image-medium" alt="@Model.DefaultPictureModel.AlternateText" src="@Model.DefaultPictureModel.ImageUrl" title="@Model.DefaultPictureModel.Title" itemprop="image" id="main-product-img-@Model.Id" />
+        }
+    </div>
+    @if (Model.PictureModels.Count > 0)
+    {
+        <div class="picture-thumbs">
+            <ul id="thumblist" class="clearfix">
+                @for (int i = 0; i < Model.PictureModels.Count; i++)
+                {
+                    var picture = Model.PictureModels[i];
+                     
+                    <li>
+                        <a href='javascript:void(0);' rel="{gallery: 'gal1', smallimage: '@picture.MediumSizeImageUrl',largeimage: '@picture.FullSizeImageUrl'}" title="@Model.Name">
+                            <img src="@picture.ImageUrl" alt="@picture.AlternateText" title="@picture.Title" />
+                        </a>
+                    </li>  
+                }
+            </ul>
+        </div> 
+    }
+    <script type="text/javascript">
+    $(document).ready(function () {
+        $('.jqzoom').jqzoom({
+            zoomType: 'standard',
+            lens: true,
+            preloadImages: true,
+            alwaysOn: false,
+            zoomWidth: 360,
+            zoomHeight: 400,
+            title: false,
+            xOffset: 10,
+            yOffset: 0,
+        });
+
+    });
+    </script> 
+</div>

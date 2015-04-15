@@ -1,0 +1,1 @@
+E:\tm\code\Plugins\Nop.Plugin.Shipping.AustraliaPost\obj\Release\Nop.Plugin.Shipping.AustraliaPost.csprojResolveAssemblyReference.cache

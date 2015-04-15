@@ -1,0 +1,10 @@
+E:\tm\code\Presentation\Nop.Web\Plugins\Tax.FixedRate\Description.txt
+E:\tm\code\Presentation\Nop.Web\Plugins\Tax.FixedRate\web.config
+E:\tm\code\Presentation\Nop.Web\Plugins\Tax.FixedRate\Views\TaxFixedRate\Configure.cshtml
+E:\tm\code\Presentation\Nop.Web\Plugins\Tax.FixedRate\logo.jpg
+E:\tm\code\Presentation\Nop.Web\Plugins\Tax.FixedRate\Nop.Plugin.Tax.FixedRate.dll.config
+E:\tm\code\Presentation\Nop.Web\Plugins\Tax.FixedRate\Nop.Plugin.Tax.FixedRate.dll
+E:\tm\code\Presentation\Nop.Web\Plugins\Tax.FixedRate\Nop.Plugin.Tax.FixedRate.pdb
+E:\tm\code\Plugins\Nop.Plugin.Tax.FixedRate\obj\Debug\Nop.Plugin.Tax.FixedRate.csprojResolveAssemblyReference.cache
+E:\tm\code\Plugins\Nop.Plugin.Tax.FixedRate\obj\Debug\Nop.Plugin.Tax.FixedRate.dll
+E:\tm\code\Plugins\Nop.Plugin.Tax.FixedRate\obj\Debug\Nop.Plugin.Tax.FixedRate.pdb

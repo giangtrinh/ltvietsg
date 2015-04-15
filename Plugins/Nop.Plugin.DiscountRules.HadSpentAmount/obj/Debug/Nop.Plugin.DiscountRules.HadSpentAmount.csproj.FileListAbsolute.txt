@@ -1,0 +1,10 @@
+E:\tm\code\Presentation\Nop.Web\Plugins\DiscountRules.HadSpentAmount\Views\DiscountRulesHadSpentAmount\Configure.cshtml
+E:\tm\code\Presentation\Nop.Web\Plugins\DiscountRules.HadSpentAmount\Description.txt
+E:\tm\code\Presentation\Nop.Web\Plugins\DiscountRules.HadSpentAmount\web.config
+E:\tm\code\Presentation\Nop.Web\Plugins\DiscountRules.HadSpentAmount\logo.jpg
+E:\tm\code\Presentation\Nop.Web\Plugins\DiscountRules.HadSpentAmount\Nop.Plugin.DiscountRules.HadSpentAmount.dll.config
+E:\tm\code\Presentation\Nop.Web\Plugins\DiscountRules.HadSpentAmount\Nop.Plugin.DiscountRules.HadSpentAmount.dll
+E:\tm\code\Presentation\Nop.Web\Plugins\DiscountRules.HadSpentAmount\Nop.Plugin.DiscountRules.HadSpentAmount.pdb
+E:\tm\code\Plugins\Nop.Plugin.DiscountRules.HadSpentAmount\obj\Debug\Nop.Plugin.DiscountRules.HadSpentAmount.dll
+E:\tm\code\Plugins\Nop.Plugin.DiscountRules.HadSpentAmount\obj\Debug\Nop.Plugin.DiscountRules.HadSpentAmount.pdb
+E:\tm\code\Plugins\Nop.Plugin.DiscountRules.HadSpentAmount\obj\Debug\Nop.Plugin.DiscountRules.HadSpentAmount.csprojResolveAssemblyReference.cache

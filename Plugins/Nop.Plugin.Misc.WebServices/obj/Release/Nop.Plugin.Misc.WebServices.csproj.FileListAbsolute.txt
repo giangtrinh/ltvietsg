@@ -1,0 +1,1 @@
+E:\tm\code\Plugins\Nop.Plugin.Misc.WebServices\obj\Release\Nop.Plugin.Misc.WebServices.csprojResolveAssemblyReference.cache

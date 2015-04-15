@@ -1,0 +1,2 @@
+E:\tm\code\Tests\Nop.Web.MVC.Tests\obj\Release\Nop.Web.MVC.Tests.csproj.App.config
+E:\tm\code\Tests\Nop.Web.MVC.Tests\obj\Release\Nop.Web.MVC.Tests.csprojResolveAssemblyReference.cache

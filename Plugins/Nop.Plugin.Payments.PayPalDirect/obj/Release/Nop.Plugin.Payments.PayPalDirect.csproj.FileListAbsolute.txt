@@ -1,0 +1,1 @@
+E:\tm\code\Plugins\Nop.Plugin.Payments.PayPalDirect\obj\Release\Nop.Plugin.Payments.PayPalDirect.csprojResolveAssemblyReference.cache

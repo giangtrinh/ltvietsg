@@ -1,0 +1,144 @@
+﻿@model DiscountModel
+@using Nop.Web.Models.Discounts;
+@using Nop.Core.Domain.Seo;
+@using Nop.Core.Infrastructure;
+@using Nop.Web.Models.Catalog;
+@using Nop.Web.Extensions;
+@using Nop.Core;
+@using Nop.Services.Seo;
+@using Nop.Services.Localization;
+@{
+    Layout = "~/Views/Shared/_ColumnsTwo.cshtml";
+    //title, meta
+    Html.AddTitleParts(!String.IsNullOrEmpty(Model.MetaTitle) ? Model.MetaTitle : Model.Name);
+    Html.AddMetaDescriptionParts(Model.MetaDescription);
+    Html.AddMetaKeywordParts(Model.MetaKeywords);
+
+    Html.AppendScriptParts("~/Scripts/tm/jquery.dd.min.js");
+    Html.AppendCssFileParts("~/Content/tm/dd.css");
+    
+    var seoSettings = EngineContext.Current.Resolve<SeoSettings>();
+     
+
+    //open graph META tags
+    if (seoSettings.OpenGraphMetaTags)
+    {
+        var storeName = EngineContext.Current.Resolve<IStoreContext>().CurrentStore.GetLocalized(x => x.Name);
+        Html.AddHeadCustomParts("<meta property=\"og:type\" content=\"product\" />");
+        Html.AddHeadCustomParts("<meta property=\"og:title\" content=\"" + Html.Encode(Model.Name) + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"og:description\" content=\"" + Html.Encode(Model.MetaDescription) + "\" />");
+        //Html.AddHeadCustomParts("<meta property=\"og:image\" content=\"" + Model.DefaultPictureModel.ImageUrl + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"og:url\" content=\"" + Request.Url.AbsoluteUri + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"og:site_name\" content=\"" + Html.Encode(storeName) + "\" />");
+    }
+
+    //Twitter META tags
+    if (seoSettings.TwitterMetaTags)
+    {
+        var storeName = EngineContext.Current.Resolve<IStoreContext>().CurrentStore.GetLocalized(x => x.Name);
+        Html.AddHeadCustomParts("<meta property=\"twitter:card\" content=\"summary\" />");
+        Html.AddHeadCustomParts("<meta property=\"twitter:site\" content=\"" + Html.Encode(storeName) + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"twitter:title\" content=\"" + Html.Encode(Model.Name) + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"twitter:description\" content=\"" + Html.Encode(Model.MetaDescription) + "\" />");
+        //Html.AddHeadCustomParts("<meta property=\"twitter:image\" content=\"" + Model.DefaultPictureModel.ImageUrl + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"twitter:url\" content=\"" + Request.Url.AbsoluteUri + "\" />");
+    }
+}
+
+<div class="page discount-page">
+    <div class="page-title">
+        <h1>@Model.Name</h1>
+    </div>
+    <div class="page-body"> 
+        @*description*@
+        @if (!String.IsNullOrWhiteSpace(Model.Description))
+        {
+            <div class="discount-description">
+                @Html.Raw(Model.Description)
+            </div>
+        }
+        @if (Model.ListAppliedProducts.Count > 0)
+        {
+            <div class="product-selectors">
+                @*view mode*@
+                @if (Model.PagingFilteringContext.AllowProductViewModeChanging && Model.ListAppliedProducts.Count > 0)
+                    {
+                    <div class="product-viewmode">
+                        <span class="lblviewmode">@T("Catalog.ViewMode")</span>
+                        @foreach (var item in Model.PagingFilteringContext.AvailableViewModes)
+                            {
+                            <a href="@item.Value" class="viewmode viewmode-@item.Text">@item.Text</a>
+                            }
+                        @*@Html.DropDownList("products-viewmode", Model.PagingFilteringContext.AvailableViewModes, new { onchange = "setLocation(this.value);" })*@
+                    </div>
+                    }
+                    @*sorting*@
+                    @if (Model.PagingFilteringContext.AllowProductSorting && Model.ListAppliedProducts.Count > 0)
+                    {
+                    <div class="product-sorting">
+                        <span class="lblsorting">@T("Catalog.OrderBy")</span>
+                        @Html.DropDownList("products-orderby", Model.PagingFilteringContext.AvailableSortOptions, new { onchange = "setLocation(this.value);" })
+                    </div>
+                    <script type="text/javascript">
+                            $(document).ready(function (e) {
+                                try {
+                                    $("#products-orderby").msDropDown({
+                                        roundedCorner: false
+                                    });
+                                } catch (e) {
+                                    alert(e.message);
+                                }
+                            });
+                    </script>
+                    }
+                    @*page size*@
+                    @if (Model.PagingFilteringContext.AllowCustomersToSelectPageSize && Model.ListAppliedProducts.Count > 0)
+                    {
+                    <div class="product-page-size">
+                        <span class="lblpagesize">@T("Catalog.PageSize")</span>
+                        @foreach (var item in Model.PagingFilteringContext.PageSizeOptions)
+                            {
+                            <a href="@item.Value" class="@if(item.Selected){<text>on</text>}">@item.Text</a>
+                            }
+                        @*@Html.DropDownList("products-pagesize", Model.PagingFilteringContext.PageSizeOptions, new { onchange = "setLocation(this.value);" })
+                            <span>@T("Catalog.PageSize.PerPage")</span>*@
+                    </div>
+                    }
+                </div>
+        } 
+        @*product list*@
+        @if (Model.ListAppliedProducts.Count > 0)
+        {
+            if (Model.PagingFilteringContext.ViewMode == "list")
+            {
+                @*list mode*@
+                <div class="product-list">
+                    @foreach (var product in Model.ListAppliedProducts)
+                        {
+                        <div class="item-box">
+                            @Html.Partial("_ProductBox", product)
+                        </div>
+                        }
+                </div>
+            }
+            else
+            {
+                @*grid mode*@
+                <div class="product-grid">
+                    @foreach (var product in Model.ListAppliedProducts)
+                        {
+                            var i = Model.ListAppliedProducts.IndexOf(product) + 1;
+                        <div class="item-box @if( ( i + 4 ) % 4 == 0){<text>last</text>}">
+                            @Html.Partial("_ProductBox", product)
+                        </div>
+                        }
+                </div>
+            }
+        }
+        <div class="pager">
+            @Html.Pager(Model.PagingFilteringContext).QueryParam("pagenumber")
+        </div>  
+    </div>
+    @*@Html.Action("RecentlyViewedProductsBlock", "Product", new { productThumbPictureSize = 100 })*@
+</div>
+

@@ -1,0 +1,11 @@
+E:\tm\code\Presentation\Nop.Web\Plugins\Payments.CheckMoneyOrder\Views\PaymentCheckMoneyOrder\Configure.cshtml
+E:\tm\code\Presentation\Nop.Web\Plugins\Payments.CheckMoneyOrder\Views\PaymentCheckMoneyOrder\PaymentInfo.cshtml
+E:\tm\code\Presentation\Nop.Web\Plugins\Payments.CheckMoneyOrder\web.config
+E:\tm\code\Presentation\Nop.Web\Plugins\Payments.CheckMoneyOrder\Description.txt
+E:\tm\code\Presentation\Nop.Web\Plugins\Payments.CheckMoneyOrder\logo.jpg
+E:\tm\code\Presentation\Nop.Web\Plugins\Payments.CheckMoneyOrder\Nop.Plugin.Payments.CheckMoneyOrder.dll.config
+E:\tm\code\Presentation\Nop.Web\Plugins\Payments.CheckMoneyOrder\Nop.Plugin.Payments.CheckMoneyOrder.dll
+E:\tm\code\Presentation\Nop.Web\Plugins\Payments.CheckMoneyOrder\Nop.Plugin.Payments.CheckMoneyOrder.pdb
+E:\tm\code\Plugins\Nop.Plugin.Payments.CheckMoneyOrder\obj\Debug\Nop.Plugin.Payments.CheckMoneyOrder.dll
+E:\tm\code\Plugins\Nop.Plugin.Payments.CheckMoneyOrder\obj\Debug\Nop.Plugin.Payments.CheckMoneyOrder.pdb
+E:\tm\code\Plugins\Nop.Plugin.Payments.CheckMoneyOrder\obj\Debug\Nop.Plugin.Payments.CheckMoneyOrder.csprojResolveAssemblyReference.cache

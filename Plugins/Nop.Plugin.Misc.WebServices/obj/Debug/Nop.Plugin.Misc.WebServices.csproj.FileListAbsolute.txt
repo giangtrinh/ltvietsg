@@ -1,0 +1,12 @@
+E:\tm\code\Presentation\Nop.Web\Plugins\Misc.WebServices\Description.txt
+E:\tm\code\Presentation\Nop.Web\Plugins\Misc.WebServices\Views\MiscWebServices\Configure.cshtml
+E:\tm\code\Presentation\Nop.Web\Plugins\Misc.WebServices\web.config
+E:\tm\code\Presentation\Nop.Web\Plugins\Misc.WebServices\logo.jpg
+E:\tm\code\Presentation\Nop.Web\Plugins\Misc.WebServices\Remote\NopService.svc
+E:\tm\code\Presentation\Nop.Web\Plugins\Misc.WebServices\Remote\web.config
+E:\tm\code\Presentation\Nop.Web\Plugins\Misc.WebServices\Nop.Plugin.Misc.WebServices.dll.config
+E:\tm\code\Presentation\Nop.Web\Plugins\Misc.WebServices\Nop.Plugin.Misc.WebServices.dll
+E:\tm\code\Presentation\Nop.Web\Plugins\Misc.WebServices\Nop.Plugin.Misc.WebServices.pdb
+E:\tm\code\Plugins\Nop.Plugin.Misc.WebServices\obj\Debug\Nop.Plugin.Misc.WebServices.csprojResolveAssemblyReference.cache
+E:\tm\code\Plugins\Nop.Plugin.Misc.WebServices\obj\Debug\Nop.Plugin.Misc.WebServices.dll
+E:\tm\code\Plugins\Nop.Plugin.Misc.WebServices\obj\Debug\Nop.Plugin.Misc.WebServices.pdb

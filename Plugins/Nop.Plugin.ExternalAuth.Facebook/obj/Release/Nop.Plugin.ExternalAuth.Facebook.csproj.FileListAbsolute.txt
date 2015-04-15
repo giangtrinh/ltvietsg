@@ -1,0 +1,2 @@
+E:\tm\code\Plugins\Nop.Plugin.ExternalAuth.Facebook\obj\Release\Nop.Plugin.ExternalAuth.Facebook.csproj.App.config
+E:\tm\code\Plugins\Nop.Plugin.ExternalAuth.Facebook\obj\Release\Nop.Plugin.ExternalAuth.Facebook.csprojResolveAssemblyReference.cache

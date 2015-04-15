@@ -1,0 +1,1 @@
+E:\tm\code\Plugins\Nop.Plugin.Feed.Froogle\obj\Release\Nop.Plugin.Feed.Froogle.csprojResolveAssemblyReference.cache

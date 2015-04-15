@@ -1,0 +1,30 @@
+﻿@{
+    Layout = "~/Views/Shared/_ColumnsOne.cshtml";
+}
+<div class="page home-page">
+    <div class="page-body">
+        @Html.Widget("home_page_top")
+        @*<div class="rev_home">
+            <div id="per-slide-template" class="rev_content slide_markers">
+                <div class="">
+                    <a href="/san-pham-ban-chay">Bán chạy</a>
+                </div>
+                <div class="cycle-pager-active">
+                    <a href="#">Khuyến mại</a>
+                </div> 
+                <div class="last">
+                    <a href="#">Giảm giá</a>
+                </div>
+            </div>
+        </div>*@
+        @*@Html.Action("TopicBlock", "Topic", new { systemName = "HomePageText" })*@
+        @Html.Action("TopicBlock", "Topic", new { systemName = "banner-promo" }) 
+        @Html.Action("HomepageCategories", "Catalog")
+        @Html.Action("HomepageProducts", "Product")
+        @Html.Action("HomepageBestSellers", "Product")
+        @Html.Action("HomePageNews", "News")
+        @Html.Action("HomePagePolls", "Poll")
+        @Html.Widget("home_page_bottom")
+    </div>
+    @Html.Action("RecentlyViewedProductsBlock", "Product", new { productThumbPictureSize = 100 })
+</div>

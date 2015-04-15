@@ -1,0 +1,19 @@
+﻿@model IList<ProductOverviewModel>
+
+@using Nop.Web.Models.Catalog;
+
+@if (Model.Count > 0)
+{
+    <div class="product-grid home-page-product-grid">
+        <div class="title">
+            <strong>@T("HomePage.Products")</strong>
+        </div>
+        @foreach (var item in Model)
+        {
+            var i = Model.IndexOf(item) + 1;
+            <div class="item-box @if( ( i + 5 ) % 5 == 0){<text>last</text>}">
+                @Html.Partial("_ProductBox", item)
+            </div>
+        }
+    </div>
+}

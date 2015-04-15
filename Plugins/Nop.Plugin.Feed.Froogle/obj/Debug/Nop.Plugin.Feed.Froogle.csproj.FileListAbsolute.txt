@@ -1,0 +1,11 @@
+E:\tm\code\Presentation\Nop.Web\Plugins\Feed.Froogle\Views\FeedFroogle\Configure.cshtml
+E:\tm\code\Presentation\Nop.Web\Plugins\Feed.Froogle\Description.txt
+E:\tm\code\Presentation\Nop.Web\Plugins\Feed.Froogle\web.config
+E:\tm\code\Presentation\Nop.Web\Plugins\Feed.Froogle\Content\styles.css
+E:\tm\code\Presentation\Nop.Web\Plugins\Feed.Froogle\logo.jpg
+E:\tm\code\Presentation\Nop.Web\Plugins\Feed.Froogle\Nop.Plugin.Feed.Froogle.dll.config
+E:\tm\code\Presentation\Nop.Web\Plugins\Feed.Froogle\Nop.Plugin.Feed.Froogle.dll
+E:\tm\code\Presentation\Nop.Web\Plugins\Feed.Froogle\Nop.Plugin.Feed.Froogle.pdb
+E:\tm\code\Plugins\Nop.Plugin.Feed.Froogle\obj\Debug\Nop.Plugin.Feed.Froogle.dll
+E:\tm\code\Plugins\Nop.Plugin.Feed.Froogle\obj\Debug\Nop.Plugin.Feed.Froogle.pdb
+E:\tm\code\Plugins\Nop.Plugin.Feed.Froogle\obj\Debug\Nop.Plugin.Feed.Froogle.csprojResolveAssemblyReference.cache

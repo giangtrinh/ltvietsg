@@ -1,0 +1,9 @@
+E:\tm\code\Tests\Nop.Tests\bin\Release\Nop.Tests.dll
+E:\tm\code\Tests\Nop.Tests\bin\Release\Nop.Tests.pdb
+E:\tm\code\Tests\Nop.Tests\bin\Release\nunit.framework.dll
+E:\tm\code\Tests\Nop.Tests\bin\Release\Rhino.Mocks.dll
+E:\tm\code\Tests\Nop.Tests\bin\Release\nunit.framework.xml
+E:\tm\code\Tests\Nop.Tests\bin\Release\Rhino.Mocks.xml
+E:\tm\code\Tests\Nop.Tests\obj\Release\Nop.Tests.csprojResolveAssemblyReference.cache
+E:\tm\code\Tests\Nop.Tests\obj\Release\Nop.Tests.dll
+E:\tm\code\Tests\Nop.Tests\obj\Release\Nop.Tests.pdb

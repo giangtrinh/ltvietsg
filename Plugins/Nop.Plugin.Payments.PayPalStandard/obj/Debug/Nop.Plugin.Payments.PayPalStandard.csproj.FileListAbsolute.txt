@@ -1,0 +1,11 @@
+E:\tm\code\Presentation\Nop.Web\Plugins\Payments.PayPalStandard\Views\PaymentPayPalStandard\Configure.cshtml
+E:\tm\code\Presentation\Nop.Web\Plugins\Payments.PayPalStandard\Views\PaymentPayPalStandard\PaymentInfo.cshtml
+E:\tm\code\Presentation\Nop.Web\Plugins\Payments.PayPalStandard\web.config
+E:\tm\code\Presentation\Nop.Web\Plugins\Payments.PayPalStandard\Description.txt
+E:\tm\code\Presentation\Nop.Web\Plugins\Payments.PayPalStandard\logo.jpg
+E:\tm\code\Presentation\Nop.Web\Plugins\Payments.PayPalStandard\Nop.Plugin.Payments.PayPalStandard.dll.config
+E:\tm\code\Presentation\Nop.Web\Plugins\Payments.PayPalStandard\Nop.Plugin.Payments.PayPalStandard.dll
+E:\tm\code\Presentation\Nop.Web\Plugins\Payments.PayPalStandard\Nop.Plugin.Payments.PayPalStandard.pdb
+E:\tm\code\Plugins\Nop.Plugin.Payments.PayPalStandard\obj\Debug\Nop.Plugin.Payments.PayPalStandard.dll
+E:\tm\code\Plugins\Nop.Plugin.Payments.PayPalStandard\obj\Debug\Nop.Plugin.Payments.PayPalStandard.pdb
+E:\tm\code\Plugins\Nop.Plugin.Payments.PayPalStandard\obj\Debug\Nop.Plugin.Payments.PayPalStandard.csprojResolveAssemblyReference.cache
